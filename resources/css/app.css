@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+    input:checked ~ .dot {
+        filter: brightness(1);
+        transform: translateX(100%);
+        background-color: rgb(16, 185, 129);
+    }
+
+    input:checked ~ .red-dot {
+        filter: brightness(1);
+        transform: translateX(100%);
+        background-color: rgb(225,29,7);
+    }
+
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+}
+
+[x-cloak] { display: none !important; }
+[v-cloak] { display: none !important; }
+
+[v-cloak] + #loader::before {
+    content: "loading…";
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 600px;
+    margin: 0 auto;
+    font-size: 60px;
+}

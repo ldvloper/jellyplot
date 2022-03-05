@@ -1,0 +1,169 @@
+:root {
+    --popper-theme-background-color: #333333;
+    --popper-theme-background-color-hover: #333333;
+    --popper-theme-text-color: #ffffff;
+    --popper-theme-border-width: 0px;
+    --popper-theme-border-style: solid;
+    --popper-theme-border-radius: 6px;
+    --popper-theme-padding: 7px;
+    --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+}
+
+    .vis-inner{
+        font-weight: bold!important;
+    }
+    .vis-today{
+        background-color: rgba(245, 123, 1, 0.03);
+        border-radius: 0.25rem;
+    }
+
+    .vis-today div{
+        background-color: rgba(245, 123, 1, 0.8);
+        color:white;
+        padding: 0px 3px 0px 3px;
+        border-radius: 0.25rem;
+    }
+
+    .vis-item {
+        border-color: rgb(245, 123, 1);
+    }
+
+    /**
+    Weekends
+       1-Saturday
+       2-Sunday
+    **/
+    .vis-saturday{
+        background-color: rgba(215, 215, 215, 0.03);
+    }
+    .vis-sunday{
+        background-color: rgba(215, 215, 215, 0.03);
+    }
+
+    /*
+    Slider
+    */
+
+    .slider-orange {
+        --slider-connect-bg: #FF6900;
+        --slider-tooltip-bg: #FF6900;
+        --slider-handle-ring-color: #FF6900;
+    }
+
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 0.3s ease;
+    }
+
+    .fade-enter-from,
+    .fade-leave-to {
+        opacity: 0 ;
+    }
+
+    /*Morning*/
+    .vis-h4-h8{
+        background-color: rgba(255, 255, 0, 0.03) !important;
+    }
+    .vis-h8-h12{
+        background-color: rgba(255, 255, 0, 0.03) !important;
+    }
+/*Afternpon*/
+    .vis-h12-h16{
+        background-color: rgba(51, 102, 255, 0.03);
+    }
+    .vis-h16-h20{
+        background-color: rgba(51, 102, 255, 0.03);
+    }
+    /*Night*/
+    .vis-h20-h24{
+        background-color: rgba(153, 153, 102,0.03);
+    }
+    .vis-h0-h4 {
+        background-color: rgba(153, 153, 102,0.03);
+    }
+
+/*Hours*/
+.vis-h6{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h7{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h8{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h9{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h10{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h11{
+     background-color: rgba(255, 255, 0, 0.03) !important;
+ }
+.vis-h12{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h13{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+.vis-h14{
+    background-color: rgba(255, 255, 0, 0.03) !important;
+}
+
+/*Afternoon*/
+.vis-h15{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+.vis-h16{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+.vis-h17{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+.vis-h18{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+.vis-h19{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+.vis-h20{
+    background-color: rgba(51, 102, 255, 0.03)!important;
+}
+/*Night*/
+.vis-h21{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h22{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h23{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h24{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h0{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h1{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h2{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h3{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h4{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+.vis-h5{
+    background-color: rgba(153, 153, 102,0.03)!important;
+}
+
+div[class*='vis-text vis-minor vis-week']::before {
+    content: "Week ";
+}
+

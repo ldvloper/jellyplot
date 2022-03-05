@@ -1,0 +1,52 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/plugin-syntax-jsx": "^7.16.7",
+        "@headlessui/vue": "^1.4.3",
+        "@heroicons/vue": "^1.0.5",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/line-clamp": "^0.3.1",
+        "@tailwindcss/typography": "^0.5.0",
+        "@vue/babel-plugin-jsx": "^1.1.1",
+        "@vue/compiler-sfc": "^3.2.24",
+        "alpinejs": "^3.2.3",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "livewire-sortable": "^0.2.2",
+        "livewire-vue": "^0.3.1",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.5",
+        "postcss-import": "^14.0.1",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.38.0",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^3.0.18",
+        "vis-data": "^7.1.2",
+        "vue-loader": "^16.8.3"
+    },
+    "dependencies": {
+        "@babel/core": "^7.17.2",
+        "@babel/preset-env": "^7.16.11",
+        "chart.js": "^3.7.0",
+        "handlebars": "^4.7.7",
+        "moment": "^2.29.1",
+        "v-calendar": "^3.0.0-alpha.8",
+        "vis-network": "^9.1.0",
+        "vis-timeline": "^7.5.0",
+        "vue": "^3.2.24",
+        "vue-fullscreen": "^3.1.1",
+        "vue3-popper": "^1.4.1",
+        "vuex": "^4.0.2"
+    }
+}

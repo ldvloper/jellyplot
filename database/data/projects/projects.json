@@ -1,0 +1,23 @@
+[
+    {"reference":"Example1",
+        "color": "#fcf000",
+        "notes": "Note example",
+        "department_id": 1,
+        "customer_id": 1 ,"project_manager_id": 1 ,
+        "sample_reception":"2021-02-07T01:01" , "deadline": "2021-02-15T01:01" ,
+        "billing_status": 1,"total_cost": "20000", "creator_id": 1, "editor_id": 1},
+    {"reference":"Example2",
+        "department_id": 1,
+        "color": "#4032a8",
+        "notes": "Note example2","customer_id": 2 ,"project_manager_id": 1 ,
+        "sample_reception":"2021-02-17T01:01" , "deadline": "2021-02-25T01:01",
+        "billing_status": 1 ,"total_cost": "20000", "creator_id": 1, "editor_id": 1},
+    {"reference":"Example3",
+        "color": "#32a852",
+        "notes": "Note example3",
+        "department_id": 1,
+        "customer_id": 3 ,"project_manager_id": 1 ,
+        "sample_reception":"2022-02-15T01:01" , "deadline": "2021-02-21T01:01",
+        "billing_status": 0 ,"total_cost": "20000", "creator_id": 1, "editor_id": 1}
+
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Equipment 1","sn": "0000000000000000000000001","brand":"Algorithm" ,"model": "Example","version": "1.0",
+        "reserved": 0, "department_id": 1,
+        "creator_id":1 , "editor_id":1
+    },
+    {
+        "name": "Equipment 2","sn": "0000000000000000000000002","brand":"Cape" ,"model": "Example2","version": "1.0",
+        "reserved": 0, "department_id": 1,
+        "creator_id":1 , "editor_id":1
+    },
+    {
+        "name": "Equipment 3","sn": "0000000000000000000000003","brand":"Nginx" ,"model": "Example3","version": "3.0",
+        "reserved": 0, "department_id": 1,
+        "creator_id":1 , "editor_id":1
+    }
+]

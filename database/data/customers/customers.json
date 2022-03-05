@@ -1,0 +1,9 @@
+[
+    {"name":"LARAVEL","department_id":1},
+    {"name":"VUEJS","department_id":1},
+    {"name":"JAVASCRIPT","department_id":1},
+    {"name":"AJAX","department_id":1},
+    {"name":"PHP","department_id":1},
+    {"name":"JAVA","department_id":1},
+    {"name":"TYPESCRIPT","department_id":1}
+]
