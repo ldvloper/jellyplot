@@ -20,7 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->boolean('microsoft_user')->nullable();
             $table->foreignId('department_id')->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('position_id')->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->boolean('master')->nullable();

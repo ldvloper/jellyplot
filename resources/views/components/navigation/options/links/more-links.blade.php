@@ -66,19 +66,19 @@
             </h3>
             <ul role="list" class="mt-4 space-y-4">
                 <li class="text-base truncate">
-                    <a href="{{route('faq')}}#new-account-creation" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
+                    <a href="{{route('faq')}}" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
                        Why I need to create a new account?
                     </a>
                 </li>
 
                 <li class="text-base truncate">
-                    <a href="{{route('faq')}}#microsoft-account" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
+                    <a href="{{route('faq')}}" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
                         How to link my social networks with my account
                     </a>
                 </li>
 
                 <li class="text-base truncate">
-                    <a href="{{route('faq')}}#internet-connexion" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
+                    <a href="{{route('faq')}}" class="font-medium text-gray-900 dark:text-gray-200 hover:text-primary-color">
                         How to increase the security of my account
                     </a>
                 </li>

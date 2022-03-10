@@ -236,30 +236,6 @@ return [
 
     ],
 
-    /*
-     |--------------------------------------------------------------------------
-     | Microsoft Account Conditions
-     |--------------------------------------------------------------------------
-     |
-     |  This values define if the microsoft accounts features with required
-     |  permissions are requested or no.
-     |
-     |
-     |
-     */
-
-    'microsoftDataUsersShow' => env('MICROSOFT_DATA_USERS_SHOW', false),
-
-    /*
-   |--------------------------------------------------------------------------
-   | Microsoft Graph Resources
-   |--------------------------------------------------------------------------
-   |
-   | This values defines the resources identifiers
-   |
-   |
-   */
-    'microsoft_team_id' => env('MICROSOFT_TEAM_ID', 'e98b6f5c-af8e-4530-85b9-2d11bbc0e5ba'),
 
 
     /*

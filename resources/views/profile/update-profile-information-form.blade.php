@@ -59,20 +59,13 @@
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
-        @if(Auth::user()->microsoft_user === 0)
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="email" value="{{ __('Email') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
-        @elseif(Auth::user()->microsoft_user === 1)
-            <div class="col-span-6 sm:col-span-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input input id="email" type="email" class="mt-1 block w-full bg-gray-200 dark:bg-gray-800" value="{{Auth::user()->email}}" disabled/>
-                <span class="text-xs text-primary-color">*{{ __('Microsoft Accounts cannot modify their email') }}</span>
-            </div>
-        @endif
 
     </x-slot>
 

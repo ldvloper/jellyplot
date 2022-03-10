@@ -39,8 +39,6 @@ class User extends Authenticatable
         //Department and Work Position
         'position_id',
         'department_id',
-        //Privilege
-        'microsoft_user',
         'master',
     ];
 

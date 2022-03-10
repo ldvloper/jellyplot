@@ -3,8 +3,6 @@ Welcome to JellyPlot
 This documentation have been made in order to help developers. If you are an administrator please go to the  _JellyPlot - Help Center_. 
 Any doubt or inquire will be resolved contact us directly in [support@jellyplot.com](mailto:support@jellyplot.com) or using your admin report system.
 
-*The follow steps are subject to change and it will be change depending your server. (Docker container Will Available Soon)
-
 ## JellyPlot Core and Technology 
 
 This Planner is based in [Laravel](https://laravel.com) a Full Open Source PHP framework. 
@@ -22,21 +20,30 @@ This are most essencial things you need to be familiar:
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Installation
-    $ git clone https://github.com/ldvloper/jellyplot.git
-OR
-- Via Compressed File (Deprecated)
-- Docker (Available soon)
+To install JellyPlot you need to have Docker installed in your environment
 
-### GitHub Repository
-        $~ git clone https://github.com/ldvloper/jellyplot.git
-        $~ cd jellyplot
-        $~ composer install 
-        $~ composer update 
-        $~ php artisan key:generate
-        $~ php artisan migrate
-        $~ php artisan db:seed
-        $~ npm install
-        $~ npm run dev 
+    //Clone the repository
+    $ git clone https://github.com/ldvloper/jellyplot.git
+
+    //Go to the folder 
+    $ cd jellyplot
+    
+    //Configure a Bash alias that allows you to execute Sail's commands more easily
+    $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+    
+    //Execute Sail commands by simply typing sail
+    $ sail up
+
+    //Install composer dependecies 
+    $ sail composer install
+    $ sail composer update
+
+    //Run the database migrations
+    $ sail artisan migrate | sail debug migrate
+    
+    //Run the node_modules
+    $ sail npm install
+    $ sail npm run dev 
 
 
 ## Configuration
@@ -66,9 +73,9 @@ You need to change your ServerName, DB connexion, SMTP email service, etc.
     LOG_CHANNEL=stack
     LOG_LEVEL=debug
     
-    DB_CONNECTION=mysql
-    DB_HOST=localhost
-    DB_PORT=3306
+    DB_CONNECTION=pgsql
+    DB_HOST=pgsql
+    DB_PORT=5432
     DB_DATABASE=jellyplot
     DB_USERNAME=root
     DB_PASSWORD=

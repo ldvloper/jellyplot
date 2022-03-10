@@ -3,12 +3,10 @@ namespace App\Http\Livewire\Projects;
 
 use App\Models\Customer;
 use App\Models\Project;
-use App\Models\ProjectManager;
 use App\Models\User;
 use App\Rules\Projects\DeadlineDate;
 use App\Rules\Projects\SampleReceptionDate;
 use App\TokenStore\TokenCache;
-use Beta\Microsoft\Graph\Model\DriveItem;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -17,8 +15,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 use Livewire\Request;
 use Livewire\WithFileUploads;
-use Microsoft\Graph\Graph;
-use Microsoft\Graph\Model;
 
 use Livewire\Component;
 
