@@ -27,7 +27,7 @@ class GetHolidays extends Component
     {
         $searchTerm = '%'.$this->search.'%';
         return view('livewire.management.scheduler.holidays.get-holidays', [
-            'holidays' => Holiday::where('name', 'like', $searchTerm)
+            'holidays' => Holiday::where('name', 'ilike', $searchTerm)
                 ->orderBy($this->orderBy, $this->sortBy)
                 ->withTrashed($this->showTrashed)
                 ->paginate($this->perPage),

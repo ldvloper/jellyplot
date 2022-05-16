@@ -48,7 +48,7 @@ class SearchUser extends SpotlightCommand
      */
     public function searchUser($query)
     {
-        return User::where('name', 'like', "%$query%")
+        return User::where('name', 'ilike', "%$query%")
             ->get()
             ->map(function(User $user) {
                 // You must map your search result into SpotlightSearchResult objects

@@ -60,7 +60,7 @@ class GetProjects extends Component
             $query->where('customer_id', $this->customer);
         })
             ->where('department_id', $department->id)
-            ->where('reference', 'like', $searchTerm)
+            ->where('reference', 'ilike', $searchTerm)
             ->orderBy($this->orderBy, $this->sortBy)
             ->withTrashed($this->showTrashed)
             ->paginate($this->perPage);

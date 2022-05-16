@@ -60,14 +60,14 @@ class GetTeams extends Component
         {
             return Team::has('department')
                 ->where('user_id', '!=', auth()->user()->id)
-                ->where('name', 'like', $searchTerm)
+                ->where('name', 'ilike', $searchTerm)
                 ->orderBy('name', 'desc')->paginate(10);
         }
         else{
             $department = $this->department;
             return Team::whereHas('department', function ($query) use ($department){
                 $query->where('department_id','=', $department);
-            })->where('name', 'like', $searchTerm)->orderBy('name', 'desc')->paginate(10);
+            })->where('name', 'ilike', $searchTerm)->orderBy('name', 'desc')->paginate(10);
         }
 
     }

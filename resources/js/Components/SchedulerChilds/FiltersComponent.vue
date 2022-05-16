@@ -1,5 +1,5 @@
 <template>
-    <div class="border-dotted border-2 border-primary-color grid grid-cols-1 lg:grid-cols-6 2xl:grid-cols-9 gap-4 bg-gray-50 rounded-md p-5">
+    <div class="border border-primary-color grid grid-cols-1 lg:grid-cols-6 2xl:grid-cols-9 gap-4 bg-gray-50 rounded-md p-5">
         <div>
             <Popper :content="new Date(Date.now()).toLocaleDateString()" :hover="true" placement="right">
                 <button v-on:click="this.filterFocusToday" class="text-white px-4 w-auto h-10 bg-primary-color rounded-full filter hover:brightness-75 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
@@ -12,7 +12,7 @@
         </div>
         <div class="lg:col-span-2">
             <div class="grid grid-cols-2">
-                <div class="grid grid-cols-2">
+                <div class="grid grid-cols-4">
                     <v-date-picker @dayclick="this.filterResize" v-model="this.filter.lapse" :model-config="modelConfig" :color="this.primaryColorSimple" is-range>
                         <template v-slot="{ inputValue, inputEvents, isDragging }">
                             <div class="flex flex-col sm:flex-row justify-start items-center">

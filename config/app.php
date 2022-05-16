@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('APP_LOCALE', 'en'),
 
     /*
     |--------------------------------------------------------------------------
@@ -236,6 +236,14 @@ return [
 
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Analytics
+    |--------------------------------------------------------------------------
+   */
+    'google_analytics_token' => env('APP_GOOGLE_ANALYTICS_TOKEN', null),
+
+
 
 
     /*
@@ -295,7 +303,7 @@ return [
     |
     |
    */
-    'icon' => env('APP_ICON', 'img/favicon.png'),
+    'icon' => env('APP_ICON', null),
     'icon_class' => env('APP_ICON_CLASS',"h-24"),
     'icon_style' => env('APP_ICON_STYLE',""),
 

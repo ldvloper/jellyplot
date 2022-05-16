@@ -53,7 +53,7 @@ class GetResources extends Component
         $resources = Resource::query()->when($department, function($query) use ($department) {
             $query->where('department_id', $department->id);
         })
-            ->where('name', 'like', $searchTerm)
+            ->where('name', 'ilike', $searchTerm)
             ->orderBy($this->orderBy, $this->sortBy)
             ->withTrashed($this->showTrashed)
             ->paginate($this->perPage);

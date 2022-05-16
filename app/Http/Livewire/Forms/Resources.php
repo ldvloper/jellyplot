@@ -19,7 +19,7 @@ class Resources extends LivewireSelect
         $result = array();
         $department = auth()->user()->currentTeam->department;
 
-        $getResources = Resource::where('name', 'like', $search)->where('department_id','=', $department->id )->get();
+        $getResources = Resource::where('name', 'ilike', $search)->where('department_id','=', $department->id )->get();
         foreach ($getResources as $resource) {
             $value = array(
                 'value' => $resource->id,

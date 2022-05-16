@@ -54,7 +54,7 @@ class SearchProject extends SpotlightCommand
         }
         return Project::query()->when($department, function($queryDepartment) use ($department) {
         $queryDepartment->where('department_id', $department);
-         })->where('reference', 'like', "%$query%")
+         })->where('reference', 'ilike', "%$query%")
             ->get()
             ->map(function(Project $project) {
                 // You must map your search result into SpotlightSearchResult objects

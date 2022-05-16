@@ -25,7 +25,7 @@ class GetShifts extends Component
     {
         $searchTerm = '%'.$this->search.'%';
         return view('livewire.management.shifts.get-shifts', [
-            'shifts' => Shift::where('name', 'like', $searchTerm)
+            'shifts' => Shift::where('name', 'ilike', $searchTerm)
                 ->orderBy($this->orderBy, $this->sortBy)
                 ->withTrashed($this->showTrashed)
                 ->paginate($this->perPage),

@@ -49,43 +49,181 @@ use Illuminate\Support\Facades\Route;
         return $value;
     });
 
-    //User Contribution Resources Filter by Year Grouped By Month
-    Route::get('{userID}/{year}/projects/count', function ($userID, $year){
-        $projects = Project::where('creator_id', '=', $userID)->whereYear('created_at',$year)->get();
+    /**
+     *  User Project Contribution Filter by
+     *  Year|Month|Day
+     */
+    Route::post('contribution/projects/year/count', function (Request $request){
+        $projects = Project::where('creator_id','=', $request->user)
+            ->whereYear('created_at',$request->year)->get();
+
         $orderedProjects = $projects->groupBy(function($val) {
                 return Carbon::parse($val->created_at)->month;
             })->toArray();
-
         return RouteHelperController::getMonths($orderedProjects);
 
     });
 
+    Route::post('contribution/projects/month/count', function (Request $request){
 
+        $projects = Project::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)->get();
+        $orderedProjects = $projects->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->daysInMonth;
+        })->toArray();
 
-    Route::get('{userID}/{year}/resources/count', function ($userID, $year){
-        $resources = Resource::where('creator_id', '=', $userID)->whereYear('created_at',$year)->get();
+        return RouteHelperController::getDays($request->year, $request->month, $orderedProjects);
+
+    });
+
+    Route::post('contribution/projects/day/count', function (Request $request){
+
+        $projects = Project::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)
+            ->whereDay('created_at',$request->day)->get();
+        $orderedProjects = $projects->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->hour;
+        })->toArray();
+
+        return RouteHelperController::getHours($orderedProjects);
+
+    });
+
+    /**
+     *  User Resources Contribution Filter by
+     *  Year|Month|Day
+     */
+
+    //Year
+    Route::post('contribution/resources/year/count', function (Request $request){
+        $resources = Resource::where('creator_id','=', $request->user)
+            ->whereYear('created_at',$request->year)->get();
+
         $orderedResources = $resources->groupBy(function($val) {
             return Carbon::parse($val->created_at)->month;
         })->toArray();
         return RouteHelperController::getMonths($orderedResources);
+
     });
 
+    //Month
+    Route::post('contribution/resources/month/count', function (Request $request){
 
-    Route::get('{userID}/{year}/customers/count', function ($userID,$year){
-        $customers = Customer::where('creator_id', '=', $userID)->whereYear('created_at',$year)->get();
+        $resources = Resource::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)->get();
+        $orderedResources = $resources->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->daysInMonth;
+        })->toArray();
+
+        //Get Days
+        return RouteHelperController::getDays($request->year, $request->month, $orderedResources);
+
+    });
+
+    //Day
+    Route::post('contribution/resources/day/count', function (Request $request){
+
+        $resources = Resource::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)
+            ->whereDay('created_at',$request->day)->get();
+        $orderedResources = $resources->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->hour;
+        })->toArray();
+
+        return RouteHelperController::getHours($orderedResources);
+
+    });
+
+    /**
+     *  User Customer Contribution Filter by
+     *  Year|Month|Day
+     */
+
+    //Year
+    Route::post('contribution/customers/year/count', function (Request $request){
+        $customers = Customer::where('creator_id','=', $request->user)
+            ->whereYear('created_at',$request->year)->get();
+
         $orderedCustomers = $customers->groupBy(function($val) {
             return Carbon::parse($val->created_at)->month;
         })->toArray();
         return RouteHelperController::getMonths($orderedCustomers);
+
     });
 
+    //Month
+    Route::post('contribution/customers/month/count', function (Request $request){
 
-    Route::get('{userID}/{year}/equipment/count', function ($userID, $year){
-        $equipment = Equipment::where('creator_id', '=', $userID)->whereYear('created_at',$year)->get();
-        $orderedEquipment = $equipment->groupBy(function($val) {
+        $customers = Customer::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)->get();
+        $orderedCustomers = $customers->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->daysInMonth;
+        })->toArray();
+
+        //Get Days
+        return RouteHelperController::getDays($request->year, $request->month, $orderedCustomers);
+
+    });
+
+    //Day
+    Route::post('contribution/customers/day/count', function (Request $request){
+
+        $customers = Customer::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)
+            ->whereDay('created_at',$request->day)->get();
+        $orderedCustomers = $customers->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->hour;
+        })->toArray();
+
+        return RouteHelperController::getHours($orderedCustomers);
+
+    });
+
+    /**
+     *  User Equipment Contribution Filter by
+     *  Year|Month|Day
+     */
+    Route::post('contribution/equipment/year/count', function (Request $request){
+        $equipments = Equipment::where('creator_id','=', $request->user)
+            ->whereYear('created_at',$request->year)->get();
+
+        $orderedEquipments = $equipments->groupBy(function($val) {
             return Carbon::parse($val->created_at)->month;
         })->toArray();
-        return RouteHelperController::getMonths($orderedEquipment);
+        return RouteHelperController::getMonths($orderedEquipments);
+
+    });
+
+    Route::post('contribution/equipment/month/count', function (Request $request){
+
+        $equipments = Equipment::where('creator_id', '=', $request->user)->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)->get();
+        $orderedEquipments = $equipments->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->daysInMonth;
+        })->toArray();
+
+        return RouteHelperController::getDays($request->year, $request->month, $orderedEquipments);
+
+    });
+
+    Route::post('contribution/equipment/day/count', function (Request $request){
+
+        $equipments = Equipment::where('creator_id', '=', $request->user)
+            ->whereYear('created_at',$request->year)
+            ->whereMonth('created_at',$request->month)
+            ->whereDay('created_at',$request->day)->get();
+        $orderedEquipments = $equipments->groupBy(function($val) {
+            return Carbon::parse($val->created_at)->hour;
+        })->toArray();
+
+        return RouteHelperController::getHours($orderedEquipments);
+
     });
 
     /**
@@ -154,6 +292,21 @@ use Illuminate\Support\Facades\Route;
     //Holidays
     Route::get('holidays', function (){
         return Holiday::all();
+    });
+
+
+    /**
+     * User Latest Actions
+     */
+
+    Route::post('user/latest/tasks', function(Request $request){
+        if($request->results){
+            return Task::where('creator_id', '=', $request->user)
+                ->orderBy('created_at','desc')->take($request->results)->get();
+        }else{
+            return Task::where('creator_id', '=', $request->user)
+                ->orderBy('created_at','desc')->take(10)->get();
+        }
     });
 
 

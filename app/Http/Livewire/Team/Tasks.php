@@ -38,7 +38,7 @@ class Tasks extends Component
             'tasks' => Task::query()->when($this->resource, function (Builder $query) {
                    $query->where('resource_id', '=', $this->resource);
                })->whereRelation('team', 'id', auth()->user()->currentTeam->id)
-                ->where('title', 'like', $searchTerm)
+                ->where('title', 'ilike', $searchTerm)
                 ->orderBy('title', 'desc')->get(),
         ]);
     }

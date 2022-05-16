@@ -13,7 +13,7 @@ class Shifts extends LivewireSelect
     {
         $search= '%' . $searchTerm . '%';
         $result = array();
-        $getShifts = Shift::where('name', 'like', $search)->get();;
+        $getShifts = Shift::where('name', 'ilike', $search)->get();;
 
         foreach ($getShifts as $shift) {
             $value = array(

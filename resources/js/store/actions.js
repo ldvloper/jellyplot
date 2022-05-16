@@ -90,61 +90,247 @@ let actions = {
     },
 
     /**
-     *
+     * Project User Contribution Year
      * @param commit
      * @param userID
      * @param yearValue
      */
-    fetchUserProjectsCount({commit}, {userID, yearValue}) {
-        axios.get(`/api/${userID}/${yearValue}/projects/count`)
+    fetchUserContributionYearProjectsCount({commit}, {userID, yearValue}) {
+        axios.post(`/api/contribution/projects/year/count`,{
+            user: userID,
+            year: yearValue
+        })
             .then(res => {
-                commit('FETCH_USER_PROJECTS_COUNT', res.data)
+                commit('FETCH_USER_CONTRIBUTION_PROJECTS_COUNT', res.data)
             }).catch(err => {
             console.log(err)
         })
     },
 
     /**
-     * Get the Resources created by the user and count it
+     * Project User Contribution Month
      * @param commit
      * @param userID
+     * @param yearValue,monthValue
      */
-    fetchUserResourcesCount({commit}, {userID, yearValue}) {
-        axios.get(`/api/${userID}/${yearValue}/resources/count`)
+    fetchUserContributionMonthProjectsCount({commit}, {userID, yearValue, monthValue}) {
+        axios.post(`/api/contribution/projects/month/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue
+        })
             .then(res => {
-                commit('FETCH_USER_RESOURCES_COUNT', res.data)
+                commit('FETCH_USER_CONTRIBUTION_PROJECTS_COUNT', res.data)
             }).catch(err => {
             console.log(err)
         })
     },
 
     /**
-     * Get the Customers created by the user and count it
+     * Project User Contribution Day
      * @param commit
      * @param userID
+     * @param yearValue
+     * @param monthValue
+     * @param dayValue
      */
-    fetchUserCustomersCount({commit}, {userID, yearValue}) {
-        axios.get(`/api/${userID}/${yearValue}/customers/count`)
+    fetchUserContributionDayProjectsCount({commit}, {userID, yearValue, monthValue, dayValue}) {
+        axios.post(`/api/contribution/projects/day/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue,
+            day: dayValue
+        })
             .then(res => {
-                commit('FETCH_USER_CUSTOMERS_COUNT', res.data)
+                commit('FETCH_USER_CONTRIBUTION_PROJECTS_COUNT', res.data)
             }).catch(err => {
             console.log(err)
         })
     },
 
     /**
-     * Get the equipment created by the user and count it
+     * Resources User Contribution Year
      * @param commit
      * @param userID
+     * @param yearValue
      */
-    fetchUserEquipmentCount({commit}, {userID, yearValue}) {
-        axios.get(`/api/${userID}/${yearValue}/equipment/count`)
+    fetchUserContributionYearResourcesCount({commit}, {userID, yearValue}) {
+        axios.post(`/api/contribution/resources/year/count`,{
+            user: userID,
+            year: yearValue
+        })
             .then(res => {
-                commit('FETCH_USER_EQUIPMENT_COUNT', res.data)
+                commit('FETCH_USER_CONTRIBUTION_RESOURCES_COUNT', res.data)
             }).catch(err => {
             console.log(err)
         })
     },
+
+    /**
+     * Resources User Contribution Month
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     */
+    fetchUserContributionMonthResourcesCount({commit}, {userID, yearValue, monthValue}) {
+        axios.post(`/api/contribution/resources/month/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_RESOURCES_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Resources User Contribution Day
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     * @param dayValue
+     */
+    fetchUserContributionDayResourcesCount({commit}, {userID, yearValue, monthValue, dayValue}) {
+        axios.post(`/api/contribution/resources/day/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue,
+            day: dayValue
+
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_RESOURCES_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Equipment User Contribution Year
+     * @param commit
+     * @param userID
+     * @param yearValue
+     */
+    fetchUserContributionYearEquipmentCount({commit}, {userID, yearValue}) {
+        axios.post(`/api/contribution/equipment/year/count`,{
+            user: userID,
+            year: yearValue
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_EQUIPMENT_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Resources User Contribution Month
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     */
+    fetchUserContributionMonthEquipmentCount({commit}, {userID, yearValue, monthValue}) {
+        axios.post(`/api/contribution/equipment/month/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_EQUIPMENT_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Equipment User Contribution Day
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     * @param dayValue
+     */
+    fetchUserContributionDayEquipmentCount({commit}, {userID, yearValue, monthValue, dayValue}) {
+        axios.post(`/api/contribution/equipment/day/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue,
+            day: dayValue
+
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_EQUIPMENT_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Customers User Contribution Year
+     * @param commit
+     * @param userID
+     * @param yearValue
+     */
+    fetchUserContributionYearCustomersCount({commit}, {userID, yearValue}) {
+        axios.post(`/api/contribution/customers/year/count`,{
+            user: userID,
+            year: yearValue
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_CUSTOMERS_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Customers User Contribution Month
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     */
+    fetchUserContributionMonthCustomersCount({commit}, {userID, yearValue, monthValue}) {
+        axios.post(`/api/contribution/customers/month/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_CUSTOMERS_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
+    /**
+     * Equipment User Contribution Day
+     * @param commit
+     * @param userID
+     * @param yearValue
+     * @param monthValue
+     * @param dayValue
+     */
+    fetchUserContributionDayCustomersCount({commit}, {userID, yearValue, monthValue, dayValue}) {
+        axios.post(`/api/contribution/customers/day/count`,{
+            user: userID,
+            year: yearValue,
+            month: monthValue,
+            day: dayValue
+
+        })
+            .then(res => {
+                commit('FETCH_USER_CONTRIBUTION_CUSTOMERS_COUNT', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+
 
 
     /**

@@ -36,7 +36,7 @@ class GetUsers extends Component
             'users' => User::query()->when($this->filterDepartment, function($query){
                 $query->where('department_id', $this->filterDepartment);
             }) ->where('id', '!=', auth()->id())
-                ->where('name', 'like', $searchTerm)
+                ->where('name', 'ilike', $searchTerm)
                 ->when($this->position, function($query) {
                     $query->where('position_id', $this->position);
                 })->orderBy($this->orderBy, $this->sortBy)

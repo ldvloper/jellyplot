@@ -47,7 +47,7 @@ class CreateResource extends SpotlightCommand
      */
     public function searchTeam($query)
     {
-        return Team::where('name', 'like', "%$query%")
+        return Team::where('name', 'ilike', "%$query%")
             ->get()
             ->map(function(Team $team) {
                 // You must map your search result into SpotlightSearchResult objects

@@ -17,7 +17,7 @@ class Users extends LivewireSelect
     {
         $search= '%' . $searchTerm . '%';
         $department = auth()->user()->currentTeam->department;
-        $getUsers = User::where('name', 'like', $search)
+        $getUsers = User::where('name', 'ilike', $search)
             ->where(function($query) use ($department) {
                 $query->where('department_id','=', $department->id )
                     ->orWhere('master','=',true);

@@ -20,20 +20,40 @@ let getters = {
         return state.departmentsUsers
     },
 
-    userProjectsCount: state => {
-        return state.userProjectsCount
+    /**
+     * Contribution Projects Count
+     * @param state
+     * @return {[]}
+     */
+    userContributionProjectsCount: state => {
+        return state.userContributionProjectsCount
     },
 
-    userResourcesCount: state => {
-        return state.userResourcesCount
+    /**
+     * Contribution Resources Count
+     * @param state
+     * @return {[]}
+     */
+    userContributionResourcesCount: state => {
+        return state.userContributionResourcesCount
     },
 
-    userCustomersCount: state => {
-        return state.userCustomersCount
+    /**
+     * Contribution Customers Count
+     * @param state
+     * @return {[]}
+     */
+    userContributionCustomersCount: state => {
+        return state.userContributionCustomersCount
     },
 
-    userEquipmentCount: state => {
-        return state.userEquipmentCount
+    /**
+     * Contribution Equipment Count
+     * @param state
+     * @return {[]}
+     */
+    userContributionEquipmentCount: state => {
+        return state.userContributionEquipmentCount
     },
 
     primaryColorSimple: state => {

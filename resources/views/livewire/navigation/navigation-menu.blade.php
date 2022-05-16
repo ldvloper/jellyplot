@@ -1,4 +1,4 @@
-<div class="relative bg-white dark:bg-black">
+<div class="relative z-30 w-full bg-white dark:bg-black">
     <div class="hidden lg:block mx-auto px-4 sm:px-6">
         @if(auth()->user()->currentTeam->department)
             <div class="hidden md:flex md:justify-end md:px-5 pt-3">
@@ -9,9 +9,9 @@
         @endif
         <div class="flex z-50 justify-between items-center border-b-2 border-gray-100 dark:border-gray-900 py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
-                <x-jet-application-logo />
+                <x-jet-application-logo/>
                 @if((auth()->user()->currentTeam)->department)
-                    <h1 class="text-xl pt-5 text-primary-color font-bold">
+                    <h1 class="text-xs italic self-end pt-5 text-primary-color font-bold">
                         {{(auth()->user()->currentTeam)->department->name_show}}
                     </h1>
                 @endif
@@ -24,7 +24,7 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-14">
+            <nav class="hidden lg:flex space-x-14">
                 <!--Main Jellyplot -->
                 @if((auth()->user()->currentTeam)->department)
                     <x-navigation.options.planning/>

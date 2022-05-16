@@ -16,7 +16,7 @@ class Projects extends LivewireSelect
         $search= '%' . $searchTerm . '%';
         $result = array();
         $department = auth()->user()->currentTeam->department;
-        $getProjects = Project::where('reference', 'like', $search)
+        $getProjects = Project::where('reference', 'ilike', $search)
             ->where('department_id','=', $department->id )->get();;
 
         foreach ($getProjects as $project) {

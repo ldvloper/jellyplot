@@ -21,7 +21,7 @@ class GetProjectsByCustomer extends Component
             'projects' => Project::query()->when($this->customer, function($query) use ($searchTerm) {
             $query->where('customer_id', $this->customer->id);
             })
-            ->where('reference', 'like', $searchTerm)
+            ->where('reference', 'ilike', $searchTerm)
             ->orderBy($this->orderBy, $this->sortBy)
             ->withTrashed($this->showTrashed)
             ->paginate($this->perPage)

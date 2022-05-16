@@ -66,7 +66,7 @@ class GetTasks extends Component
             $query->where('resource_id', '=', $this->resource);
         })->when($this->project, function($query) {
             $query->where('project_id', '=', $this->project);
-            })->where('title', 'like', $searchTerm)
+            })->where('title', 'ilike', $searchTerm)
             ->orderBy($this->orderBy, $this->sortBy)
             ->withTrashed($this->showTrashed)
             ->paginate($this->perPage);

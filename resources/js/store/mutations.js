@@ -52,51 +52,51 @@ let mutations = {
     /**
      *
      * @param state
-     * @param userProjectsCount
+     * @param userContributionProjectsCount
      * @return {*}
      * @constructor
      */
-    FETCH_USER_PROJECTS_COUNT(state, userProjectsCount)
+    FETCH_USER_CONTRIBUTION_PROJECTS_COUNT(state, userContributionProjectsCount)
     {
-        return state.userProjectsCount = userProjectsCount
+        return state.userContributionProjectsCount = userContributionProjectsCount
     },
 
 
     /**
      *
      * @param state
-     * @param userResourcesCount
+     * @param userContributionResourcesCount
      * @return {*}
      * @constructor
      */
-    FETCH_USER_RESOURCES_COUNT(state, userResourcesCount)
+    FETCH_USER_CONTRIBUTION_RESOURCES_COUNT(state, userContributionResourcesCount)
     {
-        return state.userResourcesCount = userResourcesCount
+        return state.userContributionResourcesCount = userContributionResourcesCount
     },
 
 
     /**
      *
      * @param state
-     * @param userCustomersCount
+     * @param userContributionCustomersCount
      * @return {*}
      * @constructor
      */
-    FETCH_USER_CUSTOMERS_COUNT(state, userCustomersCount)
+    FETCH_USER_CONTRIBUTION_CUSTOMERS_COUNT(state, userContributionCustomersCount)
     {
-        return state.userCustomersCount = userCustomersCount
+        return state.userContributionCustomersCount = userContributionCustomersCount
     },
 
     /**
      *
      * @param state
-     * @param userEquipmentCount
+     * @param userContributionEquipmentCount
      * @return {*}
      * @constructor
      */
-    FETCH_USER_EQUIPMENT_COUNT(state, userEquipmentCount)
+    FETCH_USER_CONTRIBUTION_EQUIPMENT_COUNT(state, userContributionEquipmentCount)
     {
-        return state.userEquipmentCount = userEquipmentCount
+        return state.userContributionEquipmentCount = userContributionEquipmentCount
     },
 
     /**

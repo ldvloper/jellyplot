@@ -51,7 +51,7 @@ class SearchCustomer extends SpotlightCommand
 
         return Customer::query()->when($department, function($queryDepartment) use ($department) {
             $queryDepartment->where('department_id', $department);
-        })->where('name', 'like', "%$query%")
+        })->where('name', 'ilike', "%$query%")
             ->get()
             ->map(function(Customer $customer) {
                 // You must map your search result into SpotlightSearchResult objects

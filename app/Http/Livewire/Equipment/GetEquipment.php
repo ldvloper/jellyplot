@@ -50,7 +50,7 @@ class GetEquipment extends Component
             'equipments' => Equipment::query()->when($this->filterDepartment, function($query) use ($searchTerm) {
                 $query->where('department_id', $this->filterDepartment);
             })
-                ->where('name', 'like', $searchTerm)
+                ->where('name', 'ilike', $searchTerm)
                 ->orderBy($this->orderBy, $this->sortBy)
                 ->withTrashed($this->showTrashed)
                 ->paginate($this->perPage)

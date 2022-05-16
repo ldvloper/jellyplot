@@ -64,8 +64,8 @@ Route::middleware(['auth:sanctum'], 'verified')->group(function () {
              * Main Planning Scheduler
              *
              */
-            Route::get('/planning', function () {
-                return view('scheduler.index');
+            Route::get('/scheduler', function () {
+                return view('dashboard');
             })->name('planning.show');
 
 
@@ -202,6 +202,9 @@ Route::middleware(['auth:sanctum'], 'verified')->group(function () {
         Route::get('/jellyplot-tour')->name('tour');
         Route::get('/integration')->name('integration');
 
+        Route::get('/help-center', function (){
+            return view('help.index');
+        })->name('help.index');
 
     /**
      * DOCUMENTATION

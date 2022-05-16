@@ -48,7 +48,7 @@
                                         <span class="ml-2 flex-1 w-0 truncate">
                                                <input wire:model="site" type="text" name="site" id="site"
                                                       class="w-full p-0 dark:text-white dark:bg-gray-900 focus:ring-none focus:border-none sm:text-sm border-none dark:border-gray-700"
-                                                      maxlength="100" placeholder="https://jellyplot.com">
+                                                      maxlength="100" placeholder="https://example.com">
                                         </span>
                                     </div>
                                     <div class="ml-4 flex-shrink-0">

@@ -1,6 +1,6 @@
-<div class="hidden xl:flex justify-center items-center">
+<div class="hidden lg:flex justify-center items-center">
 @if(Laravel\Jetstream\Jetstream::hasTeamFeatures())
-    <div class="ml-3 relative hidden xl:block">
+    <div class="mx-3 relative hidden lg:block">
         <x-jet-dropdown align="right" width="60">
             <x-slot name="trigger">
                 <span class="inline-flex rounded-md">
@@ -52,12 +52,12 @@
     <x-slot name="trigger">
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
             <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                <img class="h-8 w-8 rounded-full object-cover" src="{{ auth()->user()->profile_photo_url }}" alt="{{ auth()->user()->name }}" />
             </button>
         @else
             <span class="inline-flex rounded-md">
                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-white bg-transparent hover:text-primary-color focus:outline-none transition">
-                        {{ Auth::user()->name }}
+                        {{ auth()->user()->name }}
 
                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />

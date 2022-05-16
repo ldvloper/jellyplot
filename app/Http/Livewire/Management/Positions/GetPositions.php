@@ -32,7 +32,7 @@ class GetPositions extends Component
                 $query->whereHas('departments', function ($query){
                     $query->where('position_departments.department_id', '=', $this->filterDepartment);
                 });
-            })->where('name', 'like', $searchTerm)
+            })->where('name', 'ilike', $searchTerm)
             ->orderBy($this->orderBy, $this->sortBy)
             ->withTrashed($this->showTrashed)
             ->paginate($this->perPage),

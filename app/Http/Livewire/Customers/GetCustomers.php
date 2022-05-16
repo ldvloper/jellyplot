@@ -48,7 +48,7 @@ class GetCustomers extends Component
         return view('livewire.customers.get-customers',[
             'departments' => Department::all(),
             'customers' => Customer::where('department_id', '=', $department->id)
-                ->where('name', 'like', $searchTerm)
+                ->where('name', 'ilike', $searchTerm)
                 ->orderBy($this->orderBy, $this->sortBy)
                 ->withTrashed($this->showTrashed)
                 ->paginate($this->perPage)

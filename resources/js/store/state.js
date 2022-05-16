@@ -3,10 +3,17 @@ let state = {
     resources:[],
     tasks:[],
     departmentsUsers:[],
-    userProjectsCount: [],
-    userResourcesCount: [],
-    userCustomersCount: [],
-    userEquipmentCount: [],
+    /**
+     *  User Contributions
+     *  - Projects
+     *  - Resources
+     *  - Customers
+     *  - Equipment
+     */
+    userContributionProjectsCount: [],
+    userContributionResourcesCount: [],
+    userContributionCustomersCount: [],
+    userContributionEquipmentCount: [],
 
     primaryColorSimple:[],
     secondaryColorSimple:[],

@@ -110,7 +110,7 @@
                                     Documentation
                                 </a>
 
-                                <a href="#" class="text-base font-medium text-gray-900 dark:text-gray-200 hover:text-yellow-700">
+                                <a href="{{ route('help.index') }}" class="text-base font-medium text-gray-900 dark:text-gray-200 hover:text-yellow-700">
                                     Help Center
                                 </a>
 

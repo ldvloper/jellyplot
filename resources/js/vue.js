@@ -9,25 +9,26 @@ import store from './store/index';
  */
 import 'v-calendar/dist/style.css';
 import VCalendar from 'v-calendar';
+import router from './Router';
 
 
-
-import SchedulerComponent from "./components/SchedulerComponent";
-import ModelsComponent from "./components/ModelsComponent";
-import DepartmentUsers from "./components/dashboard/DepartmentUsersComponent";
-import UserProjectsContribution from "./components/dashboard/UserProjectsContributionComponent";
-import TasksStatisticsCosts from "./components/resources/tasks/statistics/CostsComponent";
-import NewTaskComponent from "./components/Modals/NewTaskComponent"
-import DeleteTaskComponent from './components/Modals/DeleteTaskComponent';
-import MoveTaskComponent from './components/Modals/MoveTaskComponent';
-import EditTaskComponent from './components/Modals/EditTaskComponent';
-import ResourcesTasksComponent from './components/SchedulerChilds/ResourcesTasksComponent';
-import LastModificationComponent from './components/SchedulerChilds/LastModificationsComponent';
+import SchedulerComponent from "./Components/SchedulerComponent";
+import ModelsComponent from "./Components/ModelsComponent";
+import DepartmentUsers from "./Components/dashboard/DepartmentUsersComponent";
+import UserContribution from "./Components/dashboard/UserContributionComponent";
+import TasksStatisticsCosts from "./Components/resources/tasks/statistics/CostsComponent";
+import NewTaskComponent from "./Components/Modals/NewTaskComponent"
+import DeleteTaskComponent from './Components/Modals/DeleteTaskComponent';
+import MoveTaskComponent from './Components/Modals/MoveTaskComponent';
+import EditTaskComponent from './Components/Modals/EditTaskComponent';
+import ResourcesTasksComponent from './Components/SchedulerChilds/ResourcesTasksComponent';
+import LastModificationComponent from './Components/SchedulerChilds/LastModificationsComponent';
+import LatestTasksComponent from "./Components/dashboard/LatestTasksComponent";
 
 
 const vue3App = createApp({});
     vue3App.component('department-users', DepartmentUsers);
-    vue3App.component('user-projects-contribution', UserProjectsContribution);
+    vue3App.component('user-contribution', UserContribution);
     vue3App.component('scheduler-component', SchedulerComponent);
     vue3App.component('resources-tasks', ResourcesTasksComponent);
     vue3App.component('models-component', ModelsComponent);
@@ -37,7 +38,9 @@ const vue3App = createApp({});
     vue3App.component('move-task-component', MoveTaskComponent);
     vue3App.component('edit-task-component', EditTaskComponent);
     vue3App.component('last-modifications-component', LastModificationComponent);
-    vue3App.use(store).use(VueFullscreen).use(VCalendar, {});
+    vue3App.component('latest-tasks', LatestTasksComponent);
+
+    vue3App.use(store).use(VueFullscreen).use(VCalendar, {}).use(router);
 
 vue3App.mount('#app');
 

@@ -16,7 +16,7 @@ class Positions extends LivewireSelect
         $result = array();
 
         $department = auth()->user()->currentTeam->department;
-        $getPositions = Position::where('name', 'like', $search)
+        $getPositions = Position::where('name', 'ilike', $search)
             ->where('department_id','=', $department->id )->get();
         foreach ($getPositions as $position) {
             $value = array(

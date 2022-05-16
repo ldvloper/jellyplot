@@ -13,12 +13,20 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={!! json_encode(config('app.google_analytics_token')) !!}"></script>
+        <script data-popper-placement="{{config('app.analytics_token')}}">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{!! json_encode(config('app.google_analytics_token')) !!}');
+        </script>
         @livewireStyles
-
     </head>
-    <body class="font-sans antialiased ">
+    <body class="font-sans antialiased">
         <x-jet-banner></x-jet-banner>
         <div class="bg-gray-100 dark:bg-black">
+            <x-banners.version></x-banners.version>
             @livewire('navigation.navigation-menu')
             <!-- Page Heading -->
             @if (isset($header))

@@ -17,7 +17,7 @@ class ProjectManagers extends LivewireSelect
         //Getting the current team department
         $department = auth()->user()->currentTeam->department;
         $getUsers = User::whereRelation('position', 'identifier', '=', 'prj-m')
-            ->where('name', 'like', $search)->get();
+            ->where('name', 'ilike', $search)->get();
 
         foreach ($getUsers as $user) {
             $value = array(

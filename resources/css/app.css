@@ -24,20 +24,20 @@
 
     .no-scrollbar {
         -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+            scrollbar-width: none;  /* Firefox */
     }
 
 }
 
 [x-cloak] { display: none !important; }
-[v-cloak] { display: none !important; }
 
-[v-cloak] + #loader::before {
-    content: "loading…";
-    display: block;
-    text-align: center;
-    width: 300px;
-    height: 600px;
-    margin: 0 auto;
-    font-size: 60px;
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "loading…" }
+
+.pf{
+    font-family: Red Hat Display,sans-serif
+}
+
+.router-link-exact-active{
+    @apply rounded-b-lg shadow-lg bg-gray-200;
 }

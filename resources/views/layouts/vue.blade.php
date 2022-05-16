@@ -13,14 +13,23 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ mix('css/scheduler.css') }}">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={!! json_encode(config('app.google_analytics_token')) !!}"></script>
+        <script data-popper-placement="{{config('app.analytics_token')}}">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{!! json_encode(config('app.google_analytics_token')) !!}');
+        </script>
         @livewireStyles
+
     </head>
     <body class="font-sans antialiased ">
         <!-- Banners -->
         <x-jet-banner></x-jet-banner>
-
         <div class="min-h-screen bg-gray-100 dark:bg-black">
-            @livewire('navigation.navigation-menu')
+            <x-banners.version></x-banners.version>
+        @livewire('navigation.navigation-menu')
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">

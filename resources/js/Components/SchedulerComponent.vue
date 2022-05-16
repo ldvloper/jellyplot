@@ -9,20 +9,15 @@
         </div>
 
         <!--Scheduler-->
-        <div class="hidden sm:block" @click.meta="showLastModifications" v-cloak>
-            <div class="bg-gray-50" v-bind:class="{'grid grid-cols-2 gap-4 max-h-1/2':this.timelineGrid}">
+        <div class="hidden sm:block" v-cloak>
+            <div class="bg-gray-50">
                 <div>
                     <resources-tasks-component
-                        @lastModifications="showLastModifications"
                         :department="department"
-                        :user="user">
+                        :user="this.user"
+                        :team="this.team">
                     </resources-tasks-component>
                 </div>
-                <transition>
-                    <div v-show="this.timelineGrid" class="h-screen transition duration-700 ease-in-out">
-                        <last-modifications-component></last-modifications-component>
-                    </div>
-                </transition>
             </div>
         </div>
     </div>
@@ -31,7 +26,7 @@
 
 <script>
 import ResourcesTasksComponent from "./SchedulerChilds/ResourcesTasksComponent";
-import LastModificationComponent from "./SchedulerChilds/LastModificationsComponent";
+
 /**
  * Listeners
  * */
@@ -49,19 +44,20 @@ export default {
         user: {
             type: [Object, Array],
             required: true,
+        },
+        team: {
+            type: [Object, Array],
+            required: true,
         }
     },
     data: function () {
         return {
-            //UX
-            timelineGrid:false,
+
         }
     },
 
     methods: {
-        showLastModifications(){
-           this.timelineGrid = !this.timelineGrid;
-        }
+
     },
 
 

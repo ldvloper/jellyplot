@@ -20,7 +20,8 @@
         "livewire/livewire": "^2.5",
         "mobiledetect/mobiledetectlib": "^2.8",
         "simplesoftwareio/simple-qrcode": "^4.2",
-        "wire-elements/spotlight": "^1.0"
+        "wire-elements/spotlight": "^1.0",
+        "ext-calendar": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",

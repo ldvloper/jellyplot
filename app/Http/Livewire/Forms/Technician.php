@@ -17,8 +17,8 @@ class Technician extends LivewireSelect
 
         //Getting the current team department
         $department = auth()->user()->currentTeam->department;
-        $getUsers = User::whereRelation('position', 'identifier', 'like', $technician)
-            ->where('name', 'like', $search)->get();
+        $getUsers = User::whereRelation('position', 'identifier', 'ilike', $technician)
+            ->where('name', 'ilike', $search)->get();
 
         foreach ($getUsers as $user) {
             $value = array(

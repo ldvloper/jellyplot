@@ -3,7 +3,7 @@
         "name":"General" , "laboratory":true, "color":"#f44336", "information":"This is General Management Department"
     },
     {
-        "name":"Marketing." , "laboratory":true, "color":"#f44336", "information":"This is Marketing Department"
+        "name":"Marketing" , "laboratory":true, "color":"#f44336", "information":"This is Marketing Department"
     },
     {
         "name":"Operations" , "laboratory":true, "color":"#f44336", "information":"This is Operations Department"

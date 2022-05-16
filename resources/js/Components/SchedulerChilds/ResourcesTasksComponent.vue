@@ -3,7 +3,7 @@
   -->
 
 <template>
-    <div>
+    <div class="px-4">
         <!--Scheduler Filter Menu-->
         <div class="w-full bg-gray-50 flex justify-center items-center">
             <div class="text-primary-color hover:text-secondary-color cursor-pointer">
@@ -30,34 +30,11 @@
                     <arrows-expand-icon  class="h-6 w-6">
                     </arrows-expand-icon>
                 </a>
-                <div class="flex items-center">
-                    <div v-if="this.getOs() !== null && this.getOs() !== 3 && this.getOs() !== 1">
-                        <p class="px-5 text-sm text-gray-800">Open last modifications</p>
-                    </div>
-                    <div v-else>
-                        <a @click="this.lastModifications" class="text-xs px-4 py-1 rounded-md text-white bg-primary-color cursor-pointer">
-                            Open last modifications
-                        </a>
-                    </div>
-                    <div v-if="this.getOs() !== null && this.getOs() !== 3 && this.getOs() !== 1">
-                        <a @click="this.lastModifications" class="text-xs px-4 py-1 rounded-lg text-white bg-primary-color cursor-pointer">
-                            <span v-if="this.getOs() === 0">
-                                ⌘ + Left Click
-                            </span>
-                            <span v-else-if="this.getOs() === 2 || this.getOs() === 4">
-                                ⊞ + Left Click
-                            </span>
-                            <span v-else-if="this.getOs() === 2 || this.getOs() === 4">
-                                ⊞ + Left Click
-                            </span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
 
         <fullscreen v-model="fullscreen">
-            <div id="visualization" class="bg-gray-50 relative"></div>
+            <div id="visualization" class="bg-gray-50 h-screen dark:bg-black relative"></div>
         </fullscreen>
 
         <transition-group name="fade" id="vuejs-modals">
@@ -106,7 +83,7 @@ let vis = null;
 if((!localStorage.startUserSelection) || (!localStorage.endUserSelection))
 {
     localStorage.startUserSelection = Date.now();
-    localStorage.endUserSelection =Date.now()+ 4*24*3600*1000;
+    localStorage.endUserSelection = Date.now()+ 4*24*3600*1000;
 }
 //Defining Start & End Date
 let defaultStart =  Date.now();
@@ -177,6 +154,7 @@ export default {
             items: new DataSet([]),
             //Options
             options: {
+                height: '100%',
                 template: function (item,element, data) {
                     return(
                         '<div class="task-info">'+

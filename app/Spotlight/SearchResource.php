@@ -15,7 +15,7 @@ class SearchResource extends SpotlightCommand
     /**
      * This is the name of the command that will be shown in the Spotlight component.
      */
-    protected string $name = 'Search Resource/Room';
+    protected string $name = 'Search Resource';
 
     /**
      * This is the description of your command which will be shown besides the command name.
@@ -57,7 +57,7 @@ class SearchResource extends SpotlightCommand
 
         return Resource::query()->when($department, function($modelQuery) use ($department) {
             $modelQuery->where('department_id', $department);
-        })->where('name', 'like', "%$query%")
+        })->where('name', 'ilike', "%$query%")
             ->get()
             ->map(function(Resource $resource) {
                 // You must map your search result into SpotlightSearchResult objects

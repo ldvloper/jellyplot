@@ -17,7 +17,7 @@ class Equipment extends LivewireSelect
         $search= '%' . $searchTerm . '%';
         $result = array();
         $department = auth()->user()->currentTeam->department;
-        $getEquipment = \App\Models\Equipment::where('name', 'like', $search)
+        $getEquipment = \App\Models\Equipment::where('name', 'ilike', $search)
             ->where('department_id','=', $department->id )->get();;
 
         foreach ($getEquipment as $equipment) {
