@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!--==============================================
+        Basic Page Needs
+        =============================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+
+        <title>JellyPlot | Planning Tool</title>
+
+        <meta name="description" content="A Powerful Planning Tool Based in Laravel Technology">
+        <meta name="subject" content="Jellyplot is Proudly Powered by Ldvloper">
+        <meta name="keywords" content="Planning Tool, Jellyplot, JellyPlot, VueJS, Planner"/>
+        <meta name="author" content="Luigelo Davila">
+
+        <!-- ==============================================
+        Favicons
+        =============================================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+
+        <!-- ==============================================
+        Socail
+        =============================================== -->
+        <meta property='og:title' content='JellyPlot | Planning Tool'/>
+        <meta property='og:image' content="assets/images/social-preview.png"/>
+        <meta property='og:description' content='A Powerful Planning Tool Based in Laravel Technology'/>
+        <meta property='og:url' content='https//www.jellyplot.com'/>
+
+        <!-- ==============================================
+        Global site tag (gtag.js) - Google Analytics
+        =============================================== -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9B3Y1HR5X"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V9B3Y1HR5X');
+        </script>
+
+
+        <!-- ==============================================
+        Vendor Stylesheet
+        =============================================== -->
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/slider.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/vendor/icons.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/animation.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/gallery.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- ==============================================
+        Custom Stylesheet
+        =============================================== -->
+        <link rel="stylesheet" href="assets/css/default.css">
+        <link rel="stylesheet" href="assets/css/theme-indigo.css">
+
+        <!-- ==============================================
+        Theme Settings
+        =============================================== -->
+        <style>
+            :root {
+                --header-bg-color: #f5f5f5;
+                --nav-item-color: #2f323a;
+                --top-nav-item-color: #2f323a;
+                --hero-bg-color: #f5f5f5;
+                
+                --section-1-bg-color: #f5f5f5;
+                --section-2-bg-color: #f5f5f5;
+                --section-3-bg-color: #f5f5f5;
+                --section-4-bg-color: #f5f5f5;
+                --section-5-bg-color: #f5f5f5;
+                --section-6-bg-color: #f5f5f5;
+                
+                --footer-bg-color: #f5f5f5;
+            }
+        </style>
+        
+    </head>
+
+    <body class="home">
+
+        <!-- Header -->
+        <header id="header">
+
+            <!-- Navbar -->
+            <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
+                <div class="container header">
+
+                    <!-- Navbar Brand-->
+                    <a class="navbar-brand" href="/">
+                        <img src="assets/images/jellyplot_logo.svg" alt="Jellyplot Logo" style="height: 4rem">
+                        <i class="version-number">v0.1</i>
+                    </a>
+
+                    <!-- Nav holder -->
+                    <div class="ml-auto"></div>
+                    <!-- Navbar Items -->
+                    <ul class="navbar-nav items">
+                        <li class="nav-item">
+                            <a href="#header" class="nav-link smooth-anchor">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#installation" class="nav-link smooth-anchor">Installation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#steps" class="nav-link smooth-anchor">Steps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#content" class="nav-link smooth-anchor">Content</a>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar Search
+                    <ul class="navbar-nav icons">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    -->
+
+                    <!-- Navbar Toggle -->
+                    <ul class="navbar-nav toggle">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#menu">
+                                <i class="icon-menu m-0"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar Action
+                    <ul class="navbar-nav action">
+                        <li class="nav-item ml-3">
+                            <a href="docs" class="btn ml-lg-auto primary-button smooth-anchor">
+                                <i class="icon-docs"></i>Documentation
+                            </a>
+                        </li>
+                    </ul>
+                    -->
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- Hero -->
+        <section id="slider" class="hero p-0 featured left">
+            <div class="swiper-container no-slider animation slider-h-100">
+                <div class="swiper-wrapper">
+
+                    <!-- Item 1 -->
+                    <div class="swiper-slide slide-center">
+                        <img data-aos="zoom-out-up" data-aos-delay="800" src="assets/images/4891585.png" class="hero-image" alt="Hero Image">
+                        <div class="slide-content row" data-mask-768="80">
+                            <div class="col-12 d-flex inner">
+                                <div class="left align-self-center text-center text-md-left">
+                                    <h1 data-aos="zoom-out-up" data-aos-delay="400" class="title effect-static-text">A Powerful Planning Tool</h1>
+                                    <p data-aos="zoom-out-up" data-aos-delay="800" class="description">
+                                        JellyPlot is a free, modern, light and Open Source Distributed planner tool.
+                                    </p>
+                                    <a href="http://app.jellyplot.com" class="mt-4 mr-auto ml-auto ml-lg-0 btn primary-button smooth-anchor">
+                                        <i class="fa-solid fa-jet-fighter"></i>Try For Free
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Installation [video] -->
+        <section id="installation" class="section-1 highlights image-left featured right">
+            <div class="container">
+                <div class="row">
+                    <div class="gallery col-12 col-md-6">
+                        <a data-poster="assets/images/20945446.png" href="https://youtu.be/4NwiiqzMPgc">
+                            <i class="play-video icon-control-play"></i>
+                            <div class="mask-radius"></div>
+                            <img src="assets/images/20945446.png" class="fit-image" alt="Institutional">
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 pl-md-5 align-self-center text-center text-md-left">
+                        <div class="row intro">
+                            <div class="col-12 p-0">
+                                <h2>Installation</h2>
+                                <p>Learn how to deploy Jellyplot, it's fast and easy!</p>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-12 p-0">
+                                <div class="row item">
+
+                                    <div class="d-flex col-12 align-self-center">
+                                        <h4>Clone GitHub Repository</h4>
+                                        <button class="btn btn-icon" onclick="copyGitToClipboard()">
+                                            <i class="icon-sm icon-paper-clip"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <code id="git-command" class="text-sm">git clone https://github.com/ldvloper/jellyplot.git</code>
+                                    </div>
+                                </div>
+                                <div class="row item">
+                                    <div class="col-12 align-self-center">
+                                        <h4>Configure your Environment File</h4>
+                                        <p>Change the variables in the .env file to apply your settings, customize the planner with your corporate/brand colors and turn on/off functionalities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps -->
+        <section id="steps" class="section-2 offers featured featured left">
+            <div class="container">
+                <div class="row justify-content-center text-center items">
+
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon icon-wrench"></i>
+                            <h4>Configurate your environment variables</h4>
+                            <p>Copy and change the environment file and set your configuration
+                                <code>$~ cp .env.example .env</code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon fa-brands fa-docker"></i>
+                            <h4>Run Docker and execute Laravel Sail</h4>
+                            <p>Run the following commands to run Laravel Sail
+                                <code>$~ ./vendor/bin/sail up</code>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon icon-key"></i>
+                            <h4>Generate a new Application Key</h4>
+                            <p>Generate a fresh application key for encryption
+                                <code> $~ sail php artisan key:generate</code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon icon-compass"></i>
+                            <h4>Run the Database Migration</h4>
+                            <p>Create a Database and execute the artisan commands
+                                <code>$~ sail php artisan migrate<br>$~ sail php artisan db:seed</code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon icon-layers"></i>
+                            <h4>Install The Front End Packages</h4>
+                            <p>Install NodeJS Dependencies and run the following commands
+                                <code>$~ sail npm install<br>$~ sail npm run dev/prod</code>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section id="content" class="section-2 offers featured featured right">
+            <div class="container">
+                <div class="row">
+                    <!-- Main -->
+                    <main class="col-12 col-lg-8 p-0">
+                        <div class="row">
+                            <div class="col-12 align-self-center">
+                                <h2 class="featured mt-0 ml-0">Content</h2>
+                                <p>JellyPlot is a lightweight planning tool based on PHP Laravel framework and VueJS.
+                                    Which allows you to organize various projects and tasks in an organized and simple way.</p>
+                                <p>With JellyPlot you will be able to have a robust planning system you also can create and manage API's with a intuitive interface and more.
+                                </p>
+                                <p>
+                                <blockquote>When we started to develop JellyPlot we always focused on offering the best facilities and simplicity at the time of deployment.</blockquote>
+                                </p>
+                                <h4>Structure</h4>
+                                <ul>
+                                    <li><b>Tasks</b>: That will be the information displayed in the scheduler.</li>
+                                    <li><b>Projects</b>: Projects are associated with tasks and customers.</li>
+                                    <li><b>Resources</b>: The Resources/Rooms/Places are associated with tasks.
+                                        <br>Each Task takes place at a given time lapse and on a given resource.</li>
+                                    <li><b>Equipment</b>: These are the equipment you will work with, it will remain reserved for the duration of the task to which you have assigned them. </li>
+                                    <li><b>Customers</b>: These are your clients, you will be able to associate indicators for a good data analysis. </li>
+                                </ul>
+
+                                <p>When you install Jellyplot by default you will find that there are already clients, projects, users and equipment created.</p>
+                                <p>You can do tests with this data to understand the Planning Tool Structure.</p>
+
+                                <h4>Admin Credentials</h4>
+                                <p>Once the database seed is done, you will be able to access the content with the following credentials:</p>
+                                <ul>
+                                    <li><b>Email</b>: <i>admin@jellyplot.com</i></li>
+                                    <li><b>Password</b>: <i>admin</i></li>
+                                </ul>
+                                <p>You can modify these credentials in the future changing your .env file.</p>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Sidebar -->
+                    <aside class="col-12 col-lg-4 pl-lg-5 p-0 float-right sidebar">
+                        <div class="row">
+                            <div class="col-12 align-self-center text-left">
+
+                                <!-- Widget [services] -->
+                                <div class="item widget-services">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a>
+                                                <i class="icon icon-screen-smartphone"></i>
+                                                <h5>Responsive</h5>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a>
+                                                <i class="icon icon-check"></i>
+                                                <h5>High Compatibility</h5>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a>
+                                                <i class="icon icon-organization"></i>
+                                                <h5>Open Source</h5>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a>
+                                                <i class="icon icon-settings"></i>
+                                                <h5>Easy Deployment</h5>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Widget [testimonials] -->
+                                <div class="item widget-carousel">
+                                    <div class="swiper-container mid-slider-simple items" data-perview="1">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide slide-center text-center item">
+                                                <div class="row card">
+                                                    <div class="col-12">
+                                                        <img src="assets/images/53850824.jpeg" alt="Luigelo Davila" class="person mb-2">
+                                                        <h4>Luigelo Davila</h4>
+                                                        <p><b>Jellyplot Creator</b> <br> <i>Full Stack Developer</i></p>
+                                                        <ul class="navbar-nav social share-list ml-auto">
+                                                            <li class="nav-item">
+                                                                <a href="https://twitter.com/luigi_dv" class="nav-link"><i class="icon-social-twitter ml-2 mr-2"></i></a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="mailto:luigelo@ldvloper.com" class="nav-link"><i class="icon-envelope ml-2 mr-2"></i></a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="https://github.com/Luigi-DV" class="nav-link"><i class="icon-social-github ml-2 mr-2"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Partners
+        <section id="partner" class="section-5 logos featured right">
+            <div class="overflow-holder">
+                <div class="container">
+                    <div class="swiper-container min-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-1.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-2.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-3.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-4.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-5.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-6.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-7.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                            <div class="swiper-slide slide-center item">
+                                <img src="assets/images/logo-8.png" class="fit-image w-85" alt="Fit Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+
+        <!-- Footer -->
+        <footer>
+
+            <!-- Footer [links] -->
+            <section id="footer" class="footer">
+                <div class="container">
+                    <div class="row items footer-widget">
+                        <div class="col-12 col-lg-3 p-0">
+                            <div class="row">
+                                <div class="branding col-12 p-3 text-center text-lg-left item">
+                                    <div class="brand">
+                                        <a href="/" class="Jellyplot logo">
+                                            <img src="assets/images/jellyplot_logo.svg" alt="Jellyplot Logo" style="height: 2.5rem">
+                                            JellyPlot
+                                        </a>
+                                    </div>
+                                    <p>A Powerful Planning Tool <br>Built to fast deployment<br>with a focus on usability<br>and performance.</p>
+                                    <ul class="navbar-nav social share-list mt-0 ml-auto">
+                                        <li class="nav-item">
+                                            <a href="https://github.com/ldvloper/jellyplot.git" class="nav-link"><i class="icon-social-github ml-0"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://twitter.com/luigi_dv" class="nav-link"><i class="icon-social-twitter"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-9 p-0">                            
+                            <div class="row">
+                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
+                                    <h4 class="title">Get in Touch</h4>
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a href="mailto:contact@jellyplot.com" class="nav-link">
+                                                <i class="icon-envelope mr-2"></i>
+                                                contact@jellyplot.com
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="mailto:support@jellyplot.com" class="nav-link">
+                                                <i class="icon-support mr-2"></i>
+                                                support@jellyplot.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
+                                    <h4 class="title">Website Map</h4>
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a href="#header" class="nav-link">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#installation" class="nav-link">Installation</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#content" class="nav-link">Content</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
+                                    <h4 class="title">Related Websites</h4>
+                                    <a href="https://laravel.com/" class="badge tag">Laravel</a>
+                                    <a href="https://vuejs.org/" class="badge tag">VueJS</a>
+                                    <a href="https://www.php.net/" class="badge tag">PHP</a>
+                                    <a href="https://getcomposer.org/" class="badge tag">Composer</a>
+                                    <a href="https://nodejs.org/es/" class="badge tag">NodeJS</a>
+                                    <a href="https://github.com/" class="badge tag">Github</a>
+                                    <a href="https://git-scm.com/" class="badge tag">Git</a>
+                                    <a href="https://www.nginx.com/" class="badge tag">Nginx</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Copyright -->
+            <section id="copyright" class="p-3 copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 p-3 text-center text-lg-left">
+                            <p>Enjoy the open source. Your collaboration makes the community grow.</p>
+
+                        </div>
+                        <div class="col-12 col-md-6 p-3 text-center text-lg-right">
+                            <p>© <script>document.write(new Date().getFullYear())</script> JellyPlot is Proudly Powered by <a href="https://ldvloper.com" target="_blank">Ldvloper</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+
+        <!-- #region Global ============================ -->
+
+        <!-- Modal [search] -->
+        <div id="search" class="p-0 modal fade" role="dialog" aria-labelledby="search" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-slideout" role="document">
+                <div class="modal-content full">
+                    <div class="modal-header" data-dismiss="modal">
+                        Search <i class="icon-close"></i>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row">
+                            <div class="col-12 p-0 align-self-center">
+                                <div class="row">
+                                    <div class="col-12 p-0 pb-3">
+                                        <h2>What are you looking for?</h2>
+                                        <p>Search for services and news about the best that happens in the world.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 p-0 input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Keywords">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 p-0 input-group align-self-center">
+                                        <button class="btn primary-button"><i class="icon-magnifier"></i>SEARCH</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal [responsive menu] -->
+        <div id="menu" class="p-0 modal fade" role="dialog" aria-labelledby="menu" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-slideout" role="document">
+                <div class="modal-content full">
+                    <div class="modal-header" data-dismiss="modal">
+                        Menu <i class="icon-close"></i>
+                    </div>
+                    <div class="menu modal-body">
+                        <div class="row w-100">
+                            <div class="items p-0 col-12 text-center">
+                                <!-- Append [navbar] -->
+                            </div>
+                            <div class="contacts p-0 col-12 text-center">
+                                <!-- Append [navbar] -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll [to top] -->
+        <div id="scroll-to-top" class="scroll-to-top">
+            <a href="#header" class="smooth-anchor">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>        
+
+
+        <!-- ==============================================
+        Vendor Scripts
+        =============================================== -->
+        <script src="assets/js/vendor/jquery.min.js"></script>
+        <script src="assets/js/vendor/jquery.easing.min.js"></script>
+        <script src="assets/js/vendor/jquery.inview.min.js"></script>
+        <script src="assets/js/vendor/popper.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/ponyfill.min.js"></script>
+        <script src="assets/js/vendor/slider.min.js"></script>
+        <script src="assets/js/vendor/animation.min.js"></script>
+        <script src="assets/js/vendor/progress-radial.min.js"></script>
+        <script src="assets/js/vendor/bricklayer.min.js"></script>
+        <script src="assets/js/vendor/gallery.min.js"></script>
+        <script src="assets/js/vendor/shuffle.min.js"></script>
+        <script src="assets/js/vendor/cookie-notice.min.js"></script>
+        <script src="assets/js/vendor/particles.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/custom/functions.js"></script>
+
+        <!-- #endregion Global ========================= -->
+
+    </body>
+</html>
