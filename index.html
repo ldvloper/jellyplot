@@ -245,6 +245,21 @@
                             </p>
                         </div>
                     </div>
+                    
+                     <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card no-hover">
+                            <i class="icon icon-wrench"></i>
+                            <h4>Install vendor folder</h4>
+                            <p>Execute the following code
+                                <code>docker run --rm \
+                                    -u "$(id -u):$(id -g)" \
+                                    -v $(pwd):/opt \
+                                    -w /opt \
+                                    laravelsail/php80-composer:latest \
+                                    composer install --ignore-platform-reqs</code>
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="col-12 col-md-6 col-lg-4 item">
                         <div class="card no-hover">
